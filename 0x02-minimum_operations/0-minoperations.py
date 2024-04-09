@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
     A method that calculates the fewest
-    number of operations needed to result in 
-    exactly n H characters in the file
+    number of operations needed to result in
+    exactly n H characters in the file.
 """
 
 
-def minOperations(n):
+def minOperations(n: int) -> int:
     """
         prototype: def minOperations(n)
         Return an integer
