@@ -12,13 +12,17 @@ def minOperations(n: int) -> int:
         Return an integer
         if n is impossible to achieve, return 0
     """
-    if n < 2:
+    next = 'H'
+    body = 'H'
+    op = 0
+    while (len(body) < n):
+        if n % len(body) == 0:
+            op += 2
+            next = body
+            body += body
+        else:
+            op += 1
+            body += next
+    if len(body) != n:
         return 0
-
-    dp = [0] * (n + 1)
-    for i in range(2, n + 1):
-        dp[i] = i
-        for j in range(2, i):
-            if i % j == 0:
-                dp[i] = min(dp[i], dp[j] + i // j)
-    return dp[n]
+    return op
