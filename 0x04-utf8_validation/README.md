@@ -1,4 +1,4 @@
-# 0x06. Star Wars API
+# 0x04. UTF-8 validation
 
 ### Concepts Needed:
 
